@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import Sports from '../components/Sports'
 
 export default function Home(){
-
-    const navigate = useNavigate()
 
     return( 
     <HomeHTML>
@@ -49,7 +46,6 @@ const Countent = styled.main`
     align-items: center;
     margin-top: 100px;
 `
-
 const Sport = styled.div`
     display: flex;
     margin-bottom: 15px;
