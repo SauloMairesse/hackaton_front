@@ -6,13 +6,13 @@ import axios from 'axios'
 export default function Home(){
 
     const navigate = useNavigate()
-
-    // React.useEffect( () => {
-    //     const URL = 'https://sport-plus-hackathon.herokuapp.com/'
-    //     const promise = axios.get(URL)
-    //     promise.then( (response) => {console.log(response.data)} )
-    //     promise.catch( (err) => console.log('Deu Erro get Sports: ',err))   } 
-    // ,[])
+    const [sports, setSports] = React.useState([])
+    React.useEffect( () => {
+        const URL = 'https://sport-plus-hackathon.herokuapp.com/'
+        const promise = axios.get(URL)
+        promise.then( (response) => {setSports(...response.data)} )
+        promise.catch( (err) => console.log('Deu Erro get Sports: ',err))   } 
+    ,[])
 
     return( 
     <HomeHTML>
