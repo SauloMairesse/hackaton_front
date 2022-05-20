@@ -51,6 +51,8 @@ const Header = styled.header`
     color: #F2D230;
 
     position: fixed;
+    left: 0;
+    top: 0;
 
     ion-icon{
         position: absolute;
@@ -65,6 +67,12 @@ const Page = styled.main`
     flex-direction: column;
 
     align-items: center;
+
+    background-color: #9BB5BF;
+
+    margin-top: 10vh;
+
+    padding-top: 5vh;
 `
 
 const Articles = styled.ul`
@@ -102,8 +110,6 @@ const Banner = styled.div`
     height: 20vh;
 
     background-color: #ADBF24;
-
-    margin-top: 15vh;
 
     border-radius: 4vh;
 
