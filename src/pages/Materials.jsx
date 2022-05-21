@@ -31,7 +31,7 @@ export default function Materials(){
             </Header>
 
             <Page>
-                {(data)? data.required.map(elemento => <p>{elemento}</p> ) : <p>Carregando</p>}
+                {(data)? data.required.map((elemento, index) => { return <p>{index + 1}- {elemento}</p>} ) : <p>Carregando</p>}
             </Page>
         </>
     )
@@ -70,15 +70,20 @@ const Page = styled.main`
     display: flex;
     flex-direction: column;
 
-    align-items: center;
+    align-items: flex-start;
 
     background-color: #9BB5BF;
 
     margin-top: 10vh;
 
-    padding-top: 5vh;
+    padding: 5vh 1vh;
 
     p{
+        margin: 1vh 0;
         white-space: pre-line;
+
+        font-family: 'Roboto';
+        font-size: 15px;
+        line-height: 28px;
     }
 `
