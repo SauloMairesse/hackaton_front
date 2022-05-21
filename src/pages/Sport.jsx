@@ -53,11 +53,6 @@ export default function Sport(){
                         <h3>Benefícios para Saúde</h3>
                     </div>
                 </Link>
-                <Link to={`/sport/${_id}/quizz`}>
-                    <div>
-                        <h3>Quizz</h3>
-                    </div>
-                </Link>
             </Articles>
         </Page>
     </> 
