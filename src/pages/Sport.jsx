@@ -11,7 +11,6 @@ export default function Sport(){
     async function getSport(){
         try{
             const sport = await axios.get(`https://sport-plus-hackathon.herokuapp.com/${_id}`);
-            console.log(sport.data);
             setData(sport.data);
         }
         catch(err){
@@ -27,7 +26,7 @@ export default function Sport(){
     return( 
     <>
         <Header>
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <Link to={'/'}><ion-icon name="arrow-back-outline"></ion-icon></Link>
             <h1>SportPlus</h1>
         </Header>
 
@@ -71,6 +70,7 @@ const Header = styled.header`
     background-color: #F20732;
 
     color: #F2D230;
+    font-size: 4vh;
 
     position: fixed;
     left: 0;
