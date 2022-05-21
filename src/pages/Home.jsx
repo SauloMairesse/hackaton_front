@@ -22,17 +22,21 @@ const HomeHTML = styled.main`
     align-items: center;
     background-color: #9bb5bf;
     h1 {
-        width: 100vw;
-        margin-left: 20px;
+        font-size: 20px;
         margin-bottom: 30px;
-        text-align: left;
+        align-self: flex-start;
+        font-family: 'Roboto', sans-serif;
     }
 `;
 const Header = styled.header`
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     min-height: 60px;
     background-color: #f20732;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -50,13 +54,8 @@ const Countent = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-
-    h1 {
-        margin-bottom: 30px;
-        font-family: 'Roboto';
-        font-size: 20px;
-    }
+    margin-top: 90px;
+    overflow-x: hidden;
 `;
 const Sport = styled.div`
     display: flex;
