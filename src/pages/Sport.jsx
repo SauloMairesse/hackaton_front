@@ -27,7 +27,7 @@ export default function Sport(){
     return( 
     <>
         <Header>
-            <ion-icon name="arrow-back-outline"></ion-icon>
+            <Link to={'/'}><ion-icon name="arrow-back-outline"></ion-icon></Link>
             <h1>SportPlus</h1>
         </Header>
 
