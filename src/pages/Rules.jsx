@@ -65,7 +65,7 @@ const Header = styled.header`
 
 const Page = styled.main`
     width: 100vw;
-    height: auto;
+    height: calc(100vh - 60px);
 
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@ const Page = styled.main`
 
     background-color: #9BB5BF;
 
-    margin-top: 10vh;
+    margin-top: 60px;
 
     padding: 5vh 1vh;
 
