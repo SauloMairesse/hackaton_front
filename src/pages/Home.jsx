@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import Sports from '../components/Sports'
-export default function Home(){
 
-    const navigate = useNavigate()
+export default function Home(){
 
     return( 
     <HomeHTML>
@@ -25,6 +22,7 @@ const HomeHTML = styled.main`
     align-items: center;
     height: 100vh;
     background-color: #9BB5BF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     h1{
         width: 100vw;
         margin-left: 20px;
@@ -49,7 +47,6 @@ const Countent = styled.main`
     align-items: center;
     margin-top: 100px;
 `
-
 const Sport = styled.div`
     display: flex;
     margin-bottom: 15px;
