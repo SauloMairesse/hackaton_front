@@ -75,4 +75,8 @@ const Page = styled.main`
     margin-top: 10vh;
 
     padding-top: 5vh;
+
+    p{
+        white-space: pre-line;
+    }
 `

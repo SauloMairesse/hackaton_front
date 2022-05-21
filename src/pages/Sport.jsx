@@ -71,6 +71,7 @@ const Header = styled.header`
     background-color: #F20732;
 
     color: #F2D230;
+    font-size: 4vh;
 
     position: fixed;
     left: 0;
