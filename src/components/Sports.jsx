@@ -7,8 +7,6 @@ export default function Sports(){
     const navigate = useNavigate()
     const [sports, setSports] = React.useState([])
 
-    const navigate = useNavigate();
-
     React.useEffect( () => {
         const URL = 'https://sport-plus-hackathon.herokuapp.com/'
         const promise = axios.get(URL)
