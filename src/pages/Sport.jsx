@@ -14,7 +14,6 @@ export default function Sport() {
             const sport = await axios.get(
                 `https://sport-plus-hackathon.herokuapp.com/${_id}`
             );
-            console.log(sport.data);
             setData(sport.data);
         } catch (err) {
             console.log('Deu erro na request: ', err);
