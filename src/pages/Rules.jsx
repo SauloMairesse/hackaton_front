@@ -11,7 +11,6 @@ export default function Rules(){
     async function getSport(){
         try{
             const sport = await axios.get(`https://sport-plus-hackathon.herokuapp.com/${_id}`);
-            console.log(sport.data);
             setData(sport.data);
         }
         catch(err){
@@ -53,6 +52,8 @@ const Header = styled.header`
     left: 0;
     top: 0;
 
+    font-size: 4vh;
+
     ion-icon{
         position: absolute;
         left: 0;
@@ -61,7 +62,7 @@ const Header = styled.header`
 
 const Page = styled.main`
     width: 100vw;
-    height: 90vh;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -72,5 +73,9 @@ const Page = styled.main`
 
     margin-top: 10vh;
 
-    padding-top: 5vh;
+    padding: 5vh 1vh;
+
+    p{
+        white-space: pre-line;
+    }
 `

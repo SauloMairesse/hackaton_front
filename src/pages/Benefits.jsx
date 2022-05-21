@@ -11,7 +11,6 @@ export default function Benefits(){
     async function getSport(){
         try{
             const sport = await axios.get(`https://sport-plus-hackathon.herokuapp.com/${_id}`);
-            console.log(sport.data);
             setData(sport.data);
         }
         catch(err){
@@ -73,4 +72,8 @@ const Page = styled.main`
     margin-top: 10vh;
 
     padding-top: 5vh;
+
+    p{
+        white-space: pre-line;
+    }
 `
