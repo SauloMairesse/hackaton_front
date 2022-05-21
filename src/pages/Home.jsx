@@ -22,6 +22,7 @@ const HomeHTML = styled.main`
     align-items: center;
     height: 100vh;
     background-color: #9BB5BF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     h1{
         width: 100vw;
         margin-left: 20px;

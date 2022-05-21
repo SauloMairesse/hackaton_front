@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import axios from "axios"
 import React from 'react'
-import { NavigationType, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Sports(){
@@ -20,8 +20,7 @@ export default function Sports(){
             <SportHTML onClick={ () => navigate(`/sport/${props._id}`) }>
                 <img src={props.imagem} alt="Imagem Futebol" />
                 <h2>{props.titulo}</h2>
-            </SportHTML>    
-        )
+            </SportHTML>    )
     }
 
     return(
@@ -41,14 +40,21 @@ const SportHTML = styled.div`
     position: relative;
     img{
         display: flex;
+        object-fit: cover;
         width: 320px;
         height: 140px;
         border-radius: 15px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 65.62%, rgba(0, 0, 0, 0.8) 100%), url(image.png);
+        border-radius: 5px;
     }
     h2{
         display: flex;
         position: absolute;
         bottom: 10px;
         left: 10px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 22px;
+        font-weight: 600;
     }
 `
