@@ -11,7 +11,6 @@ export default function Materials(){
     async function getSport(){
         try{
             const sport = await axios.get(`https://sport-plus-hackathon.herokuapp.com/${_id}`);
-            console.log(sport.data);
             setData(sport.data);
         }
         catch(err){
