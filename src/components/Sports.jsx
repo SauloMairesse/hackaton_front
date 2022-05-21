@@ -2,11 +2,16 @@ import styled from 'styled-components'
 import axios from "axios"
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 
 export default function Sports(){
     const navigate = useNavigate()
     const [sports, setSports] = React.useState([])
+
+    const navigate = useNavigate();
 
     React.useEffect( () => {
         const URL = 'https://sport-plus-hackathon.herokuapp.com/'
