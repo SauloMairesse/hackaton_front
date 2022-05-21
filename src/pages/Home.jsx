@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 import React from 'react';
 import Sports from '../components/Sports';
@@ -21,7 +20,7 @@ const HomeHTML = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #9bb5bf;
+    background-color: #fff9f5;
     h1 {
         font-size: 20px;
         margin-bottom: 30px;

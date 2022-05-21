@@ -34,36 +34,88 @@ export default function Sport() {
                 />
                 <div>SportPlus</div>
             </Header>
+            {data ? (
+                <Page>
+                    <Banner
+                        _id={data._id}
+                        imagem={data.coverURL}
+                        titulo={data.coverTitle}
+                    />
 
-            <Page>
-                <h1>{data.coverTitle}</h1>
-                <Banner>
-                    <p>Regras:</p>
-                    <br></br>
-                    <p> {data.rules} </p>
-                </Banner>
-
-                <Articles>
-                    <Link to={`/sport/${_id}/rules`}>
-                        <div>
-                            <h3>Regras</h3>
-                        </div>
-                    </Link>
-                    <Link to={`/sport/${_id}/materials`}>
-                        <div>
-                            <h3>Equipamentos necessários</h3>
-                        </div>
-                    </Link>
-                    <Link to={`/sport/${_id}/benefits`}>
-                        <div>
-                            <h3>Benefícios para Saúde</h3>
-                        </div>
-                    </Link>
-                </Articles>
-            </Page>
+                    <Articles>
+                        <Link to={`/sport/${_id}/rules`}>
+                            <div>
+                                <h3>Regras</h3>
+                            </div>
+                        </Link>
+                        <Link to={`/sport/${_id}/materials`}>
+                            <div>
+                                <h3>Equipamentos necessários</h3>
+                            </div>
+                        </Link>
+                        <Link to={`/sport/${_id}/benefits`}>
+                            <div>
+                                <h3>Benefícios para Saúde</h3>
+                            </div>
+                        </Link>
+                    </Articles>
+                </Page>
+            ) : (
+                <></>
+            )}
         </>
     );
 }
+
+function Banner(props) {
+    const navigate = useNavigate();
+    return (
+        <BannerHTML
+            imagem={props.imagem}
+            onClick={() => navigate(`/sport/${props._id}`)}
+        >
+            <div className="gradient">
+                <h2>{props.titulo}</h2>
+            </div>
+        </BannerHTML>
+    );
+}
+
+const BannerHTML = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 140px;
+    background: url(${(props) => props.imagem});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    .gradient {
+        position: absolute;
+        height: inherit;
+        width: 100%;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.2)
+        );
+    }
+    h2 {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+    }
+`;
 
 const Header = styled.header`
     ion-icon {
@@ -81,7 +133,7 @@ const Header = styled.header`
     align-items: center;
     width: 100%;
     min-height: 60px;
-    background-color: #f20732;
+    background-color: #008080;
     color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -93,17 +145,18 @@ const Header = styled.header`
     }
 `;
 const Page = styled.main`
+    padding: 0 5vw;
+    position: relative;
     width: 100vw;
+    padding-top: 170px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background-color: #9bb5bf;
+    background-color: #fff9f5;
 
-    margin-top: 90px;
-
-    padding-top: 5vh;
+    margin-top: 60px;
 
     h1 {
         font-size: 25px;
@@ -127,8 +180,8 @@ const Articles = styled.ul`
         width: 90vw;
         height: 10vh;
 
-        background-color: #f2d230;
-        color: #f20732;
+        background-color: #008080;
+        color: #fff;
 
         display: flex;
         flex-direction: column;
@@ -141,26 +194,5 @@ const Articles = styled.ul`
         border-radius: 1vh;
 
         padding: 2vh;
-    }
-`;
-
-const Banner = styled.div`
-    width: 90vw;
-    height: 20vh;
-
-    background-color: #adbf24;
-
-    border-radius: 4vh;
-
-    position: relative;
-
-    padding: 2vh;
-
-    overflow: hidden;
-
-    h2 {
-    }
-
-    P {
     }
 `;
