@@ -1,7 +1,28 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useParams  } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Sport(){
+    const {_id} = useParams();
+
+    const [data, setData] = useState("");
+
+    async function getSport(){
+        try{
+            const sport = await axios.get(`https://sport-plus-hackathon.herokuapp.com/${_id}`);
+            console.log(sport.data);
+            setData(sport.data);
+        }
+        catch(err){
+            console.log("Deu erro na request: ", err);
+        }
+    }
+
+    useEffect(() => {
+        getSport();
+    },[]);
+
 
     return( 
     <>
@@ -12,23 +33,23 @@ export default function Sport(){
 
         <Page>
             <Banner>
-                <h2>Futebol</h2>
+                <h2>{data.coverTitle}</h2>
 
-                <p> Jogo pra chutar a bola no gol</p>
+                <p> {data.coverText} </p>
             </Banner>
 
             <Articles>
-                <Link to={"/"}>
+                <Link to={`/sport/${_id}/rules`}>
                     <div>
                         <h3>Regras</h3>
                     </div>
                 </Link>
-                <Link to={"/"}>
+                <Link to={`/sport/${_id}/materials`}>
                     <div>
                         <h3>Equipamentos necessários</h3>
                     </div>
                 </Link>
-                <Link to={"/"}>
+                <Link to={`/sport/${_id}/benefits`}>
                     <div>
                         <h3>Benefícios para Saúde</h3>
                     </div>
@@ -118,6 +139,7 @@ const Banner = styled.div`
 
     padding: 2vh;
 
+    overflow: hidden;
 
     h2{
 
