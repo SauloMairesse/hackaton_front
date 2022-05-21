@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
 import Sports from '../components/Sports'
+
 export default function Home(){
 
     return( 
