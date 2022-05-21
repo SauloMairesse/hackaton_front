@@ -5,6 +5,7 @@ import Sport from './pages/Sport'
 import Rules from './pages/Rules'
 import Benefits from './pages/Benefits'
 import Materials from './pages/Materials'
+import Quizz from './pages/Quizz'
 
 export default function App(){
     return(
@@ -15,6 +16,7 @@ export default function App(){
                     <Route path='/sport/:_id/rules' element={<Rules/>} />
                     <Route path='/sport/:_id/benefits' element={<Benefits/>} />
                     <Route path='/sport/:_id/materials' element={<Materials/>} />
+                    <Route path='/sport/:_id/quizz' element={<Quizz/>} /> 
                 </Routes>
             </BrowserRouter>
     )
