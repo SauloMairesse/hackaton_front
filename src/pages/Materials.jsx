@@ -72,7 +72,7 @@ const Page = styled.main`
 
     align-items: flex-start;
 
-    background-color: #9BB5BF;
+    background-color: #FFF9F5;
 
     margin-top: 60px;
 
