@@ -21,6 +21,7 @@ const HomeHTML = styled.main`
     flex-direction: column;
     align-items: center;
     background-color: #fff9f5;
+
     h1 {
         font-size: 20px;
         margin-bottom: 30px;
@@ -38,7 +39,7 @@ const Header = styled.header`
     align-items: center;
     width: 100%;
     min-height: 60px;
-    background-color: #f20732;
+    background-color: #008080;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     div {

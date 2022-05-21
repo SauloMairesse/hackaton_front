@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { Link, useParams  } from "react-router-dom";
+import { Link, useParams, useNavigate  } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Benefits(){
     const {_id} = useParams();
+    const navigate = useNavigate();
 
     const [data, setData] = useState("");
 
@@ -25,8 +26,8 @@ export default function Benefits(){
     return(
         <>
             <Header>
-                <Link to={`/sport/${_id}`}><ion-icon name="arrow-back-outline"></ion-icon></Link>
-                <h1>Benefícios a Saúde</h1>
+                <ion-icon name="arrow-back-outline" onClick={() => navigate(-1)}/>
+                <div>Benefícios a Saúde</div>
             </Header>
 
             <Page>
@@ -37,39 +38,43 @@ export default function Benefits(){
 }
 
 const Header = styled.header`
-    width: 100vw;
-    height: 10vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #F20732;
-
-    color: #F2D230;
-
+    ion-icon {
+        position: absolute;
+        left: 10px;
+        font-size: 20px;
+    }
     position: fixed;
     left: 0;
     top: 0;
-
-    ion-icon{
-        position: absolute;
-        left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    background-color: #008080;
+    color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    div {
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
     }
 `
 
 const Page = styled.main`
     width: 100vw;
-    height: 90vh;
+    height: calc(100vh - 60px);
 
     display: flex;
     flex-direction: column;
 
     align-items: center;
 
-    background-color: #9BB5BF;
+    background-color: #FFF9F5;
 
-    margin-top: 10vh;
+    margin-top: 60px;
 
     padding-top: 5vh;
 
