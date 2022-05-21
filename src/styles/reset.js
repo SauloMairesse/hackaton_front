@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const Reset = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: #9bb5bf;
 }
 ol, ul {
 	list-style: none;
@@ -52,6 +53,6 @@ table {
 	box-sizing: border-box;
 	text-decoration: none;
 }
-`
+`;
 
-export default Reset
+export default Reset;
